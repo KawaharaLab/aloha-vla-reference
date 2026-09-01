@@ -1,0 +1,55 @@
+robot:
+  type: bi_widowxai_follower_robot
+  id: bimanual_follower
+
+  left_arm_max_relative_target: null
+  right_arm_max_relative_target: null
+  min_time_to_move_multiplier: 3.0
+  loop_rate: 30
+
+  include_velocity: false
+  include_effort: false
+  include_external_effort: false
+
+  cameras:
+    cam_high:
+      type: intelrealsense
+      width: 424
+      height: 240
+      fps: 30
+
+    cam_low:
+      type: intelrealsense
+      width: 424
+      height: 240
+      fps: 30
+
+    cam_left_wrist:
+      type: intelrealsense
+      width: 424
+      height: 240
+      fps: 30
+
+    cam_right_wrist:
+      type: intelrealsense
+      width: 424
+      height: 240
+      fps: 30
+
+teleop:
+  type: bi_widowxai_leader_teleop
+  id: bimanual_leader
+
+dataset:
+  repo_id: local/example_dataset
+  root: ./data/example_dataset
+  single_task: "Example task."
+  fps: 30
+  episode_time_s: 15
+  reset_time_s: 5
+  num_episodes: 1
+  video: true
+  push_to_hub: false
+  private: true
+
+display_data: true

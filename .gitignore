@@ -1,0 +1,29 @@
+# Runtime / datasets
+data/
+.runtime/
+outputs/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Models / caches
+.cache/
+*.safetensors
+*.pt
+*.pth
+
+# Local logs
+logs/
+*.log
+
+# macOS
+.DS_Store
+
+# Archives
+*.tar.gz
+*.zip
+
+# Machine-specific hardware configuration (created from tracked templates)
+config/hardware-local.yaml
