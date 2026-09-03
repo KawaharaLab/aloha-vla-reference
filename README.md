@@ -11,23 +11,27 @@ flowchart TD
 
 想定読者は、研究室へ配属されて初めてロボットを扱う学生です。ロボット、ALOHA、LeRobot、ROS 2を知っている必要はありません。Linuxのターミナルでコマンドを実行した経験が少しあれば始められます。
 
+本教材が扱うのは、組み立て完了後のsoftware環境構築、Teleoperation、データ収集、および外部sensorの追加です。Armやcameraの取り付けなど、ハードウェアの組み立て作業は対象に含みません。
+
 ## 最初にすること
 
-### 1. 実機または公式動画でALOHAを見る
+### 1. ALOHAの組み立て状態と部品構成を確認する
 
-最初から用語を覚えようとせず、まず「人がどのArmを動かし、どのArmが追従するのか」を見てください。
+ALOHAがまだ組み立てられていない場合や、機器の配置・配線を確認したい場合は、最初にTrossen Robotics公式のHardware Setupを参照してください。
 
 - [Trossen Robotics: Hardware Setup](https://docs.trossenrobotics.com/trossen_arm/main/getting_started/hardware_setup.html)
 
-このページのStationary AI Kitの動画または組立ガイドで、次の部品を確認します。
+実機を見ながら、次の部品が揃っていることを確認してください。
 
-- 人が手で動かすLeader Arm
-- 対象物を操作するFollower Arm
+- 人が手で動かす2台のLeader Arm
+- 対象物を操作する2台のFollower Arm
 - 各ArmにつながるArm Controller
 - 4台のControllerをPCにつなぐEthernet switch
-- 上方、低位置、左右手首のcamera
+- 上方、低位置、左右手首の4台のcamera
 
-組み立て方を覚える必要はありません。「どの部品の設定をこれから行うのか」が分かれば十分です。
+それぞれの部品の役割や、人が操作するLeader Armと対象物を操作するFollower Armの関係は、次の00で説明します。
+
+すでに組み立てが完了している場合は、Hardware Setupを最初から実行する必要はありません。部品構成を確認したら、00へ進んでください。
 
 ### 2. 00から順に読む
 
